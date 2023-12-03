@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.18)
+
+set(CMAKE_C++_STANDARD 17)
+
+project(math3D CXX)
+
+include_directories(
+    ./
+    ./math
+    ./rendering_utils
+)
+
+add_library(math3D 
+    ./math/Vector3.cpp 
+    ./math/Vector4.cpp 
+    ./math/Matrix4.cpp
+    ./rendering_utils/Camera.cpp
+    ./rendering_utils/Mesh.cpp
+    ./rendering_utils/Triangle.cpp
+)
