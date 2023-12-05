@@ -2,7 +2,7 @@
 
 Camera::Camera() {
 	this->position = Point(0.0f, 0.0f, 0.0f);
-	Camera(3.0f/4.0f, 0.1f, 1000.0f, 90.0f);
+	Camera((number)(3.0f/4.0f), 0.1f, 1000.0f, 90.0f);
 }
 	
 Camera::Camera(number aspectRatio, number nearPlane, number farPlane, number fov) {

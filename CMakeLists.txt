@@ -4,12 +4,6 @@ set(CMAKE_C++_STANDARD 17)
 
 project(math3D CXX)
 
-include_directories(
-    ./
-    ./math
-    ./rendering_utils
-)
-
 add_library(math3D 
     ./math/Vector3.cpp 
     ./math/Vector4.cpp 
@@ -17,4 +11,10 @@ add_library(math3D
     ./rendering_utils/Camera.cpp
     ./rendering_utils/Mesh.cpp
     ./rendering_utils/Triangle.cpp
+)
+
+target_include_directories(math3D PUBLIC
+    ./math
+    ./rendering_utils    
+    ./
 )
