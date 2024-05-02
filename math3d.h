@@ -6,5 +6,6 @@
 #include "Color.h"
 #include "Triangle.h"
 #include "Camera.h"
+#include "util.h"
 
 #endif

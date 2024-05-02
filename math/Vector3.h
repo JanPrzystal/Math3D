@@ -32,9 +32,27 @@ struct Vector3 {
 
 	Vector3 operator - (const Vector3& vec) const;
 
+	Vector3& operator += (Vector3& const other);
+
 	Vector3 cross(const Vector3& vec) const;
 
 	Vector3 normalized();
+
+	static Vector3 random();
+
+	static Vector3 random(double min, double max);
+
+	number length_squared() const;
+
+	static Vector3 random_in_unit_sphere();
+
+	static Vector3 random_normalized_vector();
+
+	static Vector3 random_on_hemisphere(const Vector3& normal);
+
+	static Vector3 reflect(const Vector3& v, const Vector3& n);
+
+	bool near_zero() ;
 };
 
 typedef Vector3 Point;
