@@ -32,7 +32,7 @@ struct Vector3 {
 
 	Vector3 operator - (const Vector3& vec) const;
 
-	Vector3& operator += (Vector3& const other);
+	Vector3& operator += (const Vector3& other);
 
 	Vector3 cross(const Vector3& vec) const;
 

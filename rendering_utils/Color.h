@@ -35,11 +35,11 @@ public:
 		return Vector3(static_cast<number>(r)/max_color, static_cast<number>(g)/max_color, static_cast<number>(b)/max_color);
 	}
 
-	Color operator + (Color& const other) const{
+	Color operator + (const Color& other) const{
 		return Color(r+other.r, g+other.g, b+other.b, a+other.a);
 	}
 
-	inline Color& operator += (Color& const other)
+	inline Color& operator += (const Color& other)
 	{
 		r += other.r;
 		g += other.g;
