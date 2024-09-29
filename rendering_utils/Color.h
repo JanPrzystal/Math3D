@@ -10,12 +10,20 @@ public:
 	uint8_t r, g, b, a;
 	static const int max_color = 1<<(sizeof(r)*8);
 
-	Color::Color(uint8_t r, uint8_t g, uint8_t b, uint8_t a) {
+	Color(uint8_t r, uint8_t g, uint8_t b, uint8_t a) {
 		this->r = r;
 		this->g = g;
 		this->b = b;
 		this->a = a;
 	}
+
+    Color(int color32){
+        r = color32 >> 24;
+        g = color32 >> 16;
+        b = color32 >> 8;
+        a = color32;
+    }
+
 	Color(){
 		Color(0, 0, 0, 0);
 	}
