@@ -32,6 +32,14 @@ public:
 		return (r << 16) | (g << 8) | b;
 	}
 
+    int toInt_16() {
+		return 0x0000ffff & (
+                (r << 11) | 
+                ((g & 0b00111111) << 5) |
+                (b & 0b00011111)
+            );
+	}
+
 	static Color fromVector(Vector3 color) {
 		assert(color.x >= 0.0 && color.x <= 1.0);
         assert(color.y >= 0.0 && color.y <= 1.0);
